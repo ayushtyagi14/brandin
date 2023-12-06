@@ -22,7 +22,7 @@ const Form = ({ closeForm }) => {
     const socialMediaHandles = ['instagram', 'youtube', 'facebook', 'twitter'];
 
     return (
-        <div className='modal bg-white flex flex-col gap-5 items-center w-max p-10'>
+        <div className='modal bg-white flex flex-col gap-5 items-center md:w-max w-[95%] mx-auto md:p-10 p-6'>
             <FontAwesomeIcon
                 icon={faTimes}
                 className='absolute top-3 right-3 text-gray-500 cursor-pointer'
@@ -33,12 +33,12 @@ const Form = ({ closeForm }) => {
                 <h1 className={`${recoleta.className} text-[30px] text-center`}>Early Access Form</h1>
             </div>
             <form onSubmit={closeForm} className='flex flex-col gap-5'>
-                <div className='flex flex-row items-center gap-10'>
+                <div className='flex md:flex-row flex-col items-center md:gap-10 gap-2'>
                     <input
                         type="text"
                         name="firstName"
                         placeholder='Enter your first name'
-                        className='border-b rounded-b focus:outline-none p-2'
+                        className='border-b rounded-b focus:outline-none p-2 w-full'
                         value={formData.firstName}
                         onChange={handleChange}
                         required
@@ -47,7 +47,7 @@ const Form = ({ closeForm }) => {
                         type="text"
                         name="lastName"
                         placeholder='Enter your last name'
-                        className='border-b rounded-b focus:outline-none p-2'
+                        className='border-b rounded-b focus:outline-none p-2 w-full'
                         value={formData.lastName}
                         onChange={handleChange}
                         required
@@ -65,12 +65,12 @@ const Form = ({ closeForm }) => {
                 <h1 className={`${recoleta.className} text-[22px] text-center`}>Social Media Handles:</h1>
                 <div className='grid grid-cols-2 items-center gap-3'>
                     {socialMediaHandles.map(handle => (
-                        <div key={handle} className='flex flex-row items-center gap-10'>
+                        <div key={handle} className='flex flex-row items-center md:gap-10'>
                             <input
                                 type="text"
                                 name={handle}
                                 placeholder={handle.charAt(0).toUpperCase() + handle.slice(1)}
-                                className='border-b rounded-b focus:outline-none p-2'
+                                className='border-b rounded-b focus:outline-none p-2 w-full'
                                 value={formData[handle]}
                                 onChange={handleChange}
                             />
