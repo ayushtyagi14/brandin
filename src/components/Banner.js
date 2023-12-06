@@ -5,7 +5,7 @@ import { slideIn } from '../utils/motion';
 
 const FeatureCard = ({ icon, title, description, direction }) => (
     <motion.div
-        className='glass p-3 flex flex-col items-center w-[400px] gap-2'
+        className='glass-card p-3 flex flex-col items-center w-[400px] gap-2'
         variants={slideIn(direction, "tween", 0.8, 0.5)}
         initial="hidden"
         whileInView="show"
@@ -20,7 +20,7 @@ const FeatureCard = ({ icon, title, description, direction }) => (
 
 const FeatureCard2 = ({ icon, title, description, direction }) => (
     <motion.div
-        className='glass p-3 flex flex-col items-center w-[370px] md:w-[80%] mx-auto gap-2'
+        className='glass-card p-3 flex flex-col items-center w-[370px] md:w-[80%] mx-auto gap-2'
         variants={slideIn(direction, "tween", 0.8, 0.5)}
         initial="hidden"
         whileInView="show"
